@@ -1,3 +1,5 @@
+# Boogle
+
 This program is an implementation of a small-scale search engine, called Boogle. To run it, simply run the Bash command
 python3 boogle.py
 
