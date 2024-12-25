@@ -1,0 +1,582 @@
+---------------------------------------------------------- INPUT ----------------------------------------------------------
+python3 boogle.py help
+---------------------------------------------------------- OUTPUT ---------------------------------------------------------
+This program is an implementation of a small-scale search engine, called Boogle. To run it, simply run the Bash command  
+python3 boogle.py
+
+To display a simple small example to help visualize a trie, run
+python3 boogle.py small_example
+
+To display this help message on the terminal, run
+python3 boogle.py help
+
+Boogle utilizes an inverted index together with a trie data structure to store the lexicographic data of each webpage.   
+The human-readable data of each of these webpages is preprocessed and parsed, then tokenized at the word-level in order  
+to be stored in the trie and inverted index. This computational model allows efficient storage and fast retrieval of     
+the data held by the webpages provided in the database that is kept in input.txt. The external node of every word stored 
+in the trie is its corresponing index in the inverted index.The inverted index is cached as a list of tuples, where the  
+first element of each of these tuples is a string, and the second element of each of these tuples is a dictionary of     
+integers. Each element of the inverted index will store the set of webpages that contain a given word, and how many times
+each of those webpages contain that word. Each webpage is stored as the corresponing index of its URL in input.txt, where
+each of its lines is a URL. See inverted_index.txt for an example of what the inverted index looks like.
+
+
+
+---------------------------------------------------------- INPUT ----------------------------------------------------------
+python3 boogle.py small_example
+---------------------------------------------------------- OUTPUT ---------------------------------------------------------
+Constructing trie...
+Printing trie:      
+
+[ROOT]
++---b
+|    +---i
+|    |    +---g
+|    |    |    +---5
+|    |    |    +---g
+|    |    |    |    +---e
+|    |    |    |    |    +---r
+|    |    |    |    |    |    +---6    
++---g
+|    +---l
+|        +---o
+|        |    +---w
+|        |    |    +---i
+|        |    |    |    +---n
+|        |    |    |    |    +---g     
+|        |    |    |    |    |    +---4
+|    +---o
+|    |    +---l
+|    |        +---f
+|    |        |    +---3
+|    |    +---o
+|    |    |    +---d
+|    |    |    |    +---2
++---h
+    +---e
+    |    +---l
+    |    |    +---l
+    |    |    |    +---o
+    |    |    |    |    +---0
++---w
+|    +---o
+|    |    +---r
+|    |    |    +---l
+|    |    |    |    +---d
+|    |    |    |    |    +---1
+
+Number of nodes in trie: 36
+Number of words in trie: 7
+All words in trie: ['big', 'bigger', 'glowing', 'golf', 'good', 'hello', 'world']
+
+Testing words for the values of their external nodes in the trie:
+hello:    0
+world:    1
+good:     2
+golf:     3
+glowing:  4
+big:      5
+bigger:   6
+bruh:    -1
+goodbye: -1
+hell:    -1
+worlds:  -1
+worldly: -1
+a:       -1
+g:       -1
+good:     2
+hell:    -1
+
+
+
+---------------------------------------------------------- INPUT ----------------------------------------------------------
+python3 boogle.py invalid_argument
+---------------------------------------------------------- OUTPUT ---------------------------------------------------------
+Unrecognized arguments.
+
+This program is an implementation of a small-scale search engine, called Boogle. To run it, simply run the Bash command  
+python3 boogle.py
+
+To display a simple small example to help visualize a trie, run
+python3 boogle.py small_example
+
+To display this help message on the terminal, run
+python3 boogle.py help
+
+Boogle utilizes an inverted index together with a trie data structure to store the lexicographic data of each webpage.   
+The human-readable data of each of these webpages is preprocessed and parsed, then tokenized at the word-level in order  
+to be stored in the trie and inverted index. This computational model allows efficient storage and fast retrieval of     
+the data held by the webpages provided in the database that is kept in input.txt. The external node of every word stored 
+in the trie is its corresponing index in the inverted index.The inverted index is cached as a list of tuples, where the  
+first element of each of these tuples is a string, and the second element of each of these tuples is a dictionary of     
+integers. Each element of the inverted index will store the set of webpages that contain a given word, and how many times
+each of those webpages contain that word. Each webpage is stored as the corresponing index of its URL in input.txt, where
+each of its lines is a URL. See inverted_index.txt for an example of what the inverted index looks like.
+
+
+
+---------------------------------------------------------- INPUT ----------------------------------------------------------
+python3 boogle.py invalid_argument1 invalid_argument2
+---------------------------------------------------------- OUTPUT ---------------------------------------------------------
+Unrecognized arguments.
+
+This program is an implementation of a small-scale search engine, called Boogle. To run it, simply run the Bash command  
+python3 boogle.py
+
+To display a simple small example to help visualize a trie, run
+python3 boogle.py small_example
+
+To display this help message on the terminal, run
+python3 boogle.py help
+
+Boogle utilizes an inverted index together with a trie data structure to store the lexicographic data of each webpage.   
+The human-readable data of each of these webpages is preprocessed and parsed, then tokenized at the word-level in order  
+to be stored in the trie and inverted index. This computational model allows efficient storage and fast retrieval of     
+the data held by the webpages provided in the database that is kept in input.txt. The external node of every word stored 
+in the trie is its corresponing index in the inverted index.The inverted index is cached as a list of tuples, where the  
+first element of each of these tuples is a string, and the second element of each of these tuples is a dictionary of     
+integers. Each element of the inverted index will store the set of webpages that contain a given word, and how many times
+each of those webpages contain that word. Each webpage is stored as the corresponing index of its URL in input.txt, where
+each of its lines is a URL. See inverted_index.txt for an example of what the inverted index looks like.
+
+
+
+---------------------------------------------------------- INPUT ----------------------------------------------------------
+python3 boogle.py ab cd efg
+---------------------------------------------------------- OUTPUT ---------------------------------------------------------
+Unrecognized arguments.
+
+This program is an implementation of a small-scale search engine, called Boogle. To run it, simply run the Bash command  
+python3 boogle.py
+
+To display a simple small example to help visualize a trie, run
+python3 boogle.py small_example
+
+To display this help message on the terminal, run
+python3 boogle.py help
+
+Boogle utilizes an inverted index together with a trie data structure to store the lexicographic data of each webpage.   
+The human-readable data of each of these webpages is preprocessed and parsed, then tokenized at the word-level in order  
+to be stored in the trie and inverted index. This computational model allows efficient storage and fast retrieval of     
+the data held by the webpages provided in the database that is kept in input.txt. The external node of every word stored 
+in the trie is its corresponing index in the inverted index.The inverted index is cached as a list of tuples, where the  
+first element of each of these tuples is a string, and the second element of each of these tuples is a dictionary of     
+integers. Each element of the inverted index will store the set of webpages that contain a given word, and how many times
+each of those webpages contain that word. Each webpage is stored as the corresponing index of its URL in input.txt, where
+each of its lines is a URL. See inverted_index.txt for an example of what the inverted index looks like.
+
+
+
+---------------------------------------------------------- INPUT ----------------------------------------------------------
+python3 boogle.py help hello
+---------------------------------------------------------- OUTPUT ---------------------------------------------------------
+Unrecognized arguments.
+
+This program is an implementation of a small-scale search engine, called Boogle. To run it, simply run the Bash command  
+python3 boogle.py
+
+To display a simple small example to help visualize a trie, run
+python3 boogle.py small_example
+
+To display this help message on the terminal, run
+python3 boogle.py help
+
+Boogle utilizes an inverted index together with a trie data structure to store the lexicographic data of each webpage.   
+The human-readable data of each of these webpages is preprocessed and parsed, then tokenized at the word-level in order  
+to be stored in the trie and inverted index. This computational model allows efficient storage and fast retrieval of     
+the data held by the webpages provided in the database that is kept in input.txt. The external node of every word stored 
+in the trie is its corresponing index in the inverted index.The inverted index is cached as a list of tuples, where the  
+first element of each of these tuples is a string, and the second element of each of these tuples is a dictionary of     
+integers. Each element of the inverted index will store the set of webpages that contain a given word, and how many times
+each of those webpages contain that word. Each webpage is stored as the corresponing index of its URL in input.txt, where
+each of its lines is a URL. See inverted_index.txt for an example of what the inverted index looks like.
+
+
+
+---------------------------------------------------------- INPUT ----------------------------------------------------------
+python3 boogle.py help foo bar
+---------------------------------------------------------- OUTPUT ---------------------------------------------------------
+Unrecognized arguments.
+
+This program is an implementation of a small-scale search engine, called Boogle. To run it, simply run the Bash command  
+python3 boogle.py
+
+To display a simple small example to help visualize a trie, run
+python3 boogle.py small_example
+
+To display this help message on the terminal, run
+python3 boogle.py help
+
+Boogle utilizes an inverted index together with a trie data structure to store the lexicographic data of each webpage.   
+The human-readable data of each of these webpages is preprocessed and parsed, then tokenized at the word-level in order  
+to be stored in the trie and inverted index. This computational model allows efficient storage and fast retrieval of     
+the data held by the webpages provided in the database that is kept in input.txt. The external node of every word stored 
+in the trie is its corresponing index in the inverted index.The inverted index is cached as a list of tuples, where the  
+first element of each of these tuples is a string, and the second element of each of these tuples is a dictionary of     
+integers. Each element of the inverted index will store the set of webpages that contain a given word, and how many times
+each of those webpages contain that word. Each webpage is stored as the corresponing index of its URL in input.txt, where
+each of its lines is a URL. See inverted_index.txt for an example of what the inverted index looks like.
+
+
+
+---------------------------------------------------------- INPUT ----------------------------------------------------------
+python3 boogle.py small_example foo
+---------------------------------------------------------- OUTPUT ---------------------------------------------------------
+Unrecognized arguments.
+
+This program is an implementation of a small-scale search engine, called Boogle. To run it, simply run the Bash command  
+python3 boogle.py
+
+To display a simple small example to help visualize a trie, run
+python3 boogle.py small_example
+
+To display this help message on the terminal, run
+python3 boogle.py help
+
+Boogle utilizes an inverted index together with a trie data structure to store the lexicographic data of each webpage.   
+The human-readable data of each of these webpages is preprocessed and parsed, then tokenized at the word-level in order  
+to be stored in the trie and inverted index. This computational model allows efficient storage and fast retrieval of     
+the data held by the webpages provided in the database that is kept in input.txt. The external node of every word stored 
+in the trie is its corresponing index in the inverted index.The inverted index is cached as a list of tuples, where the  
+first element of each of these tuples is a string, and the second element of each of these tuples is a dictionary of     
+integers. Each element of the inverted index will store the set of webpages that contain a given word, and how many times
+each of those webpages contain that word. Each webpage is stored as the corresponing index of its URL in input.txt, where
+each of its lines is a URL. See inverted_index.txt for an example of what the inverted index looks like.
+
+
+
+---------------------------------------------------------- INPUT ----------------------------------------------------------
+python3 boogle.py small_example foo bar
+---------------------------------------------------------- OUTPUT ---------------------------------------------------------
+Unrecognized arguments.
+
+This program is an implementation of a small-scale search engine, called Boogle. To run it, simply run the Bash command  
+python3 boogle.py
+
+To display a simple small example to help visualize a trie, run
+python3 boogle.py small_example
+
+To display this help message on the terminal, run
+python3 boogle.py help
+
+Boogle utilizes an inverted index together with a trie data structure to store the lexicographic data of each webpage.   
+The human-readable data of each of these webpages is preprocessed and parsed, then tokenized at the word-level in order  
+to be stored in the trie and inverted index. This computational model allows efficient storage and fast retrieval of     
+the data held by the webpages provided in the database that is kept in input.txt. The external node of every word stored 
+in the trie is its corresponing index in the inverted index.The inverted index is cached as a list of tuples, where the  
+first element of each of these tuples is a string, and the second element of each of these tuples is a dictionary of     
+integers. Each element of the inverted index will store the set of webpages that contain a given word, and how many times
+each of those webpages contain that word. Each webpage is stored as the corresponing index of its URL in input.txt, where
+each of its lines is a URL. See inverted_index.txt for an example of what the inverted index looks like.
+
+
+
+---------------------------------------------------------- INPUT ----------------------------------------------------------
+python3 boogle.py
+---------------------------------------------------------- OUTPUT ---------------------------------------------------------
+Booting up..........................
+
+Hello! Welcome to Boogle, everyone's favorite search engine! Just type what you want to search for, then press enter. A list of
+webpages relating to your query will then be displayed to you, with the best ones at the top. You can make as many searches as you want.
+Enter the query "/history" to view your search history.
+Enter the query "/clear_history" to clear your search history.
+Enter the query "/incognito" to toggle incognito mode, where your search history won't be saved or stored (off by default).
+Enter the query "/exit" to exit Boogle.
+Enter the query "/help" to display this message again.
+
+Boogle: /history
+Your search history:
+1. /history
+
+Boogle: /help
+Hello! Welcome to Boogle, everyone's favorite search engine! Just type what you want to search for, then press enter. A list of
+webpages relating to your query will then be displayed to you, with the best ones at the top. You can make as many searches as you want.
+Enter the query "/history" to view your search history.
+Enter the query "/clear_history" to clear your search history.
+Enter the query "/incognito" to toggle incognito mode, where your search history won't be saved or stored (off by default).
+Enter the query "/exit" to exit Boogle.
+Enter the query "/help" to display this message again.
+
+Boogle: computer
+Inverted index - Wikipedia (3 matches)
+   https://en.wikipedia.org/wiki/Inverted_index
+
+Texture (music) - Wikipedia (2 matches)
+   https://en.wikipedia.org/wiki/Texture_(music)
+
+What are Search Engines? - GeeksforGeeks (1 match)
+   https://www.geeksforgeeks.org/what-are-search-engines-and-how-do-they-work
+
+What is Search Engine and Google Page Ranking? - GeeksforGeeks (1 match)     
+   https://www.geeksforgeeks.org/search-engines-and-page-ranking
+
+Musicology - Wikipedia (1 match)
+   https://en.wikipedia.org/wiki/Musicology
+
+The Top 100 Greatest Albums of All Time (1 match)
+   https://www.popvortex.com/music/100-greatest-albums
+
+Boogle: computer science
+What are Search Engines? - GeeksforGeeks (8 matches)
+   https://www.geeksforgeeks.org/what-are-search-engines-and-how-do-they-work
+
+What is Search Engine and Google Page Ranking? - GeeksforGeeks (8 matches)
+   https://www.geeksforgeeks.org/search-engines-and-page-ranking
+
+Musicology - Wikipedia (5 matches)
+   https://en.wikipedia.org/wiki/Musicology
+
+Inverted index - Wikipedia (4 matches)
+   https://en.wikipedia.org/wiki/Inverted_index
+
+Boogle: search
+What are Search Engines? - GeeksforGeeks (168 matches)
+   https://www.geeksforgeeks.org/what-are-search-engines-and-how-do-they-work
+
+What is Search Engine and Google Page Ranking? - GeeksforGeeks (117 matches)
+   https://www.geeksforgeeks.org/search-engines-and-page-ranking
+
+Inverted index - Wikipedia (15 matches)
+   https://en.wikipedia.org/wiki/Inverted_index
+
+Outbreak Investigation of Salmonella: Cucumbers (June 2024) | FDA (4 matches)
+   https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-cucumbers-june-2024
+
+Elements of music - Wikipedia (3 matches)
+   https://en.wikipedia.org/wiki/Elements_of_music
+
+Musicology - Wikipedia (2 matches)
+   https://en.wikipedia.org/wiki/Musicology
+
+Biomusicology - Wikipedia (2 matches)
+   https://en.wikipedia.org/wiki/Biomusicology
+
+Texture (music) - Wikipedia (2 matches)
+   https://en.wikipedia.org/wiki/Texture_(music)
+
+Boogle: engine
+What are Search Engines? - GeeksforGeeks (74 matches)
+   https://www.geeksforgeeks.org/what-are-search-engines-and-how-do-they-work
+
+What is Search Engine and Google Page Ranking? - GeeksforGeeks (46 matches)
+   https://www.geeksforgeeks.org/search-engines-and-page-ranking
+
+Inverted index - Wikipedia (6 matches)
+   https://en.wikipedia.org/wiki/Inverted_index
+
+Boogle: search engine
+What are Search Engines? - GeeksforGeeks (242 matches)
+   https://www.geeksforgeeks.org/what-are-search-engines-and-how-do-they-work
+
+What is Search Engine and Google Page Ranking? - GeeksforGeeks (163 matches)
+   https://www.geeksforgeeks.org/search-engines-and-page-ranking
+
+Inverted index - Wikipedia (21 matches)
+   https://en.wikipedia.org/wiki/Inverted_index
+
+Boogle: music
+Musicology - Wikipedia (210 matches)
+   https://en.wikipedia.org/wiki/Musicology
+
+Elements of music - Wikipedia (83 matches)
+   https://en.wikipedia.org/wiki/Elements_of_music
+
+Biomusicology - Wikipedia (51 matches)
+   https://en.wikipedia.org/wiki/Biomusicology
+
+Texture (music) - Wikipedia (29 matches)
+   https://en.wikipedia.org/wiki/Texture_(music)
+
+The Top 100 Greatest Albums of All Time (15 matches)
+   https://www.popvortex.com/music/100-greatest-albums
+
+Boogle: wikipedia
+Texture (music) - Wikipedia (6 matches)
+   https://en.wikipedia.org/wiki/Texture_(music)
+
+Inverted index - Wikipedia (5 matches)
+   https://en.wikipedia.org/wiki/Inverted_index
+
+Musicology - Wikipedia (5 matches)
+   https://en.wikipedia.org/wiki/Musicology
+
+Biomusicology - Wikipedia (5 matches)
+   https://en.wikipedia.org/wiki/Biomusicology
+
+Elements of music - Wikipedia (5 matches)
+   https://en.wikipedia.org/wiki/Elements_of_music
+
+Boogle: music wikipedia
+Musicology - Wikipedia (215 matches)
+   https://en.wikipedia.org/wiki/Musicology
+
+Elements of music - Wikipedia (88 matches)
+   https://en.wikipedia.org/wiki/Elements_of_music
+
+Biomusicology - Wikipedia (56 matches)
+   https://en.wikipedia.org/wiki/Biomusicology
+
+Texture (music) - Wikipedia (35 matches)
+   https://en.wikipedia.org/wiki/Texture_(music)
+
+Boogle: wikipedia.org
+Texture (music) - Wikipedia (7 matches)
+   https://en.wikipedia.org/wiki/Texture_(music)
+
+Inverted index - Wikipedia (6 matches)
+   https://en.wikipedia.org/wiki/Inverted_index
+
+Musicology - Wikipedia (6 matches)
+   https://en.wikipedia.org/wiki/Musicology
+
+Biomusicology - Wikipedia (6 matches)
+   https://en.wikipedia.org/wiki/Biomusicology
+
+Elements of music - Wikipedia (6 matches)
+   https://en.wikipedia.org/wiki/Elements_of_music
+
+Boogle: Best albums of ALL TIME
+Musicology - Wikipedia (209 matches)
+   https://en.wikipedia.org/wiki/Musicology
+
+The Top 100 Greatest Albums of All Time (93 matches)
+   https://www.popvortex.com/music/100-greatest-albums
+
+Boogle: top 100 albums of All time
+The Top 100 Greatest Albums of All Time (136 matches)
+   https://www.popvortex.com/music/100-greatest-albums
+
+Boogle: How to play music?
+Musicology - Wikipedia (285 matches)
+   https://en.wikipedia.org/wiki/Musicology
+
+Boogle: food
+Outbreak Investigation of Salmonella: Cucumbers (June 2024) | FDA (15 matches)
+   https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-cucumbers-june-2024
+
+Cucumbers recalled in 26 states over possible salmonella contamination (2 matches)
+   https://www.nbcnews.com/news/us-news/cucumbers-recalled-26-states-possible-salmonella-contamination-rcna182241
+
+FDA declares cucumber-linked Salmonella outbreak over after 155 hospitalized (2 matches)
+   https://www.nbcnews.com/business/consumer/cdc-links-recalled-cucumbers-least-449-illnesses-rcna166783
+
+Boogle: contamination
+Outbreak Investigation of Salmonella: Cucumbers (June 2024) | FDA (3 matches)
+   https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-cucumbers-june-2024
+
+Cucumbers recalled in 26 states over possible salmonella contamination (1 match)
+   https://www.nbcnews.com/news/us-news/cucumbers-recalled-26-states-possible-salmonella-contamination-rcna182241
+
+Boogle: cucumber recall
+Outbreak Investigation of Salmonella: Cucumbers (June 2024) | FDA (5 matches)
+   https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-cucumbers-june-2024
+
+FDA declares cucumber-linked Salmonella outbreak over after 155 hospitalized (4 matches)
+   https://www.nbcnews.com/business/consumer/cdc-links-recalled-cucumbers-least-449-illnesses-rcna166783
+
+Boogle: cucumber
+FDA declares cucumber-linked Salmonella outbreak over after 155 hospitalized (3 matches)
+   https://www.nbcnews.com/business/consumer/cdc-links-recalled-cucumbers-least-449-illnesses-rcna166783
+
+Outbreak Investigation of Salmonella: Cucumbers (June 2024) | FDA (3 matches)
+   https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-cucumbers-june-2024
+
+Boogle: salmonella
+Outbreak Investigation of Salmonella: Cucumbers (June 2024) | FDA (48 matches)
+   https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-cucumbers-june-2024
+
+FDA declares cucumber-linked Salmonella outbreak over after 155 hospitalized (10 matches)
+   https://www.nbcnews.com/business/consumer/cdc-links-recalled-cucumbers-least-449-illnesses-rcna166783
+
+Cucumbers recalled in 26 states over possible salmonella contamination (5 matches)
+   https://www.nbcnews.com/news/us-news/cucumbers-recalled-26-states-possible-salmonella-contamination-rcna182241
+
+Boogle: outbreak of salmonella
+Outbreak Investigation of Salmonella: Cucumbers (June 2024) | FDA (188 matches)
+   https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-cucumbers-june-2024
+
+FDA declares cucumber-linked Salmonella outbreak over after 155 hospitalized (34 matches)
+   https://www.nbcnews.com/business/consumer/cdc-links-recalled-cucumbers-least-449-illnesses-rcna166783
+
+Boogle: /history
+Your search history:
+ 1. /history
+ 2. /help
+ 3. computer
+ 4. computer science
+ 5. search
+ 6. engine
+ 7. search engine
+ 8. music
+ 9. wikipedia
+10. music wikipedia
+11. wikipedia.org
+12. Best albums of ALL TIME
+13. top 100 albums of all time
+14. How to play music?
+15. food
+16. contamination
+17. cucumber recall
+18. cucumber
+19. salmonella
+20. outbreak of salmonella
+21. /history
+
+Boogle: /incognito
+Incognito mode has been turned on.
+
+Boogle: inappropriate query
+No results were found for this query. Check your spelling, or try using fewer, more general, or different keywords?
+Capitalization, punctuation, and extra spaces shouldn't matter.
+
+Boogle: /history
+Your search history:
+ 1. /history
+ 2. /help
+ 3. computer
+ 4. computer science
+ 5. search
+ 6. engine
+ 7. search engine
+ 8. music
+ 9. wikipedia
+10. music wikipedia
+11. wikipedia.org
+12. Best albums of ALL TIME
+13. top 100 albums of all time
+14. How to play music?
+15. food
+16. contamination
+17. cucumber recall
+18. cucumber
+19. salmonella
+20. outbreak of salmonella
+21. /history
+
+Boogle: /clear_history
+Your search history has been cleared.
+
+Boogle: /history  
+Your search history:
+[empty]
+
+Boogle: /incognito
+Incognito mode has been turned off.
+
+Boogle: /history
+Your search history:
+1. /history
+
+Boogle: Search Engines!
+What are Search Engines? - GeeksforGeeks (220 matches)
+   https://www.geeksforgeeks.org/what-are-search-engines-and-how-do-they-work
+
+What is Search Engine and Google Page Ranking? - GeeksforGeeks (159 matches)
+   https://www.geeksforgeeks.org/search-engines-and-page-ranking
+
+Inverted index - Wikipedia (18 matches)
+   https://en.wikipedia.org/wiki/Inverted_index
+
+Boogle: /exit
+
+Thank you for using Boogle, come again soon!
