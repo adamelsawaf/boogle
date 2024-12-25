@@ -1,12 +1,12 @@
 # Boogle
 
-This program is an implementation of a small-scale search engine, called Boogle. To run it, simply run the Bash command
+This program is an implementation of a small-scale search engine, called Boogle. To run it, simply run the Bash command\
 python3 boogle.py
 
-To display a simple small example to help visualize a trie, run
+To display a simple small example to help visualize a trie, run\
 python3 boogle.py small_example
 
-To display this help message on the terminal, run
+To display this help message on the terminal, run\
 python3 boogle.py help
 
 Boogle utilizes an inverted index together with a trie data structure to store the lexicographic data of each webpage.
