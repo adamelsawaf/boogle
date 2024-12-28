@@ -178,7 +178,7 @@ webpage_texts : list[list[str]] = []
 webpage_titles: list[str]       = []
 
 #  punctuation here does not include the apostrophe ('), since contractions and possesives (like "can't" and "Dijkstra's") use them and are very common in English
-PUNCTUATION_MARKS: str = ".,!?;:…\"()[]{}-–—*/\\|&~#^@%•<>$+=§"
+PUNCTUATION_MARKS: str = ".,!?‽;:…\"()[]{}-–—*/\\|&~#^@%‰‱•<>$+=§"
 for url in urls:
     #  use each given webpage url to generate the HTML of that webpage
     webpage_html: BeautifulSoup = BeautifulSoup(
